@@ -407,7 +407,7 @@ def main():
         bm.url = final_url
         bm.title = title
         bm.artist = artist
-        bm.author = m.get('author', '')
+        bm.author = m.get('author') or ''
         bm.description = m.get('description', '')
         bm.thumbnailUrl = m.get('cover_url', '')
         bm.dateAdded = int(item.get('created_at', 0) * 1000) if item.get('created_at') else 0
