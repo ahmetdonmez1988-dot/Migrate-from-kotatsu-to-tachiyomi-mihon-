@@ -42,11 +42,6 @@ jobs:
             exit 1
           fi
 
-          - name: Using Node.js v20
-          runs:
-          using: 'node20'
-          main: 'main.js'
-
       - name: Run Migration Script (v6.6.6)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
